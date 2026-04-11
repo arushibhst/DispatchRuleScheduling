@@ -25,7 +25,7 @@ class Job:
         if(self.__flowtime < 0): print("error calculating flowtime")
         return self.__flowtime
     
-    def calcTardiness(self):
+    def calcTard(self):
         self.__tardiness = max(self.__FT-self.__DD, 0)
         return self.__tardiness
 

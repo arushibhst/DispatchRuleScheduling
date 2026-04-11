@@ -2,8 +2,6 @@ from Job import Job
 import heapq
 
 class Machine: 
-    # totalTime = 74
-
     def __init__(self, jobs):
         self.__jobs= jobs
         self.__prevJobFT = 0

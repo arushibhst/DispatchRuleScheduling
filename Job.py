@@ -9,6 +9,7 @@ class Job:
         self.__rule = rule
         self.__FT = 0
         self.__flowtime = 0
+        self.__tardiness = 0
         self.__isProcessed = False
 
     def __lt__(self, other):
@@ -18,12 +19,18 @@ class Job:
             return self.__PT < other.getPT()
         # else earliest due date (EDD)
         return self.__DD < other.getDD()
+    
+    def calcFlow(self):
+        self.__flowtime = self.__FT - self.__AT
+        if(self.__flowtime < 0): print("error calculating flowtime")
+        return self.__flowtime
+    
+    def calcTard(self):
+        self.__tardiness = max(self.__FT-self.__DD, 0)
+        return self.__tardiness
 
     def setFT(self, finish):
         self.__FT = finish
-    
-    def setFlow(self, flow):
-        self.__flowtime = flow
 
     def getName(self):
         return self.__name

@@ -25,6 +25,6 @@ Average Total Flowtime: 47.0
 Average Total Tardiness: 8.6  
  
 Custom Rule: Shortest Processing Time and Earliest Due Date  
-Schedule: D, C, E, B, A  
-Average Total Flowtime: 41.8  
-Average Total Tardiness: 9.2  
+Schedule: D, E, C, A, B  
+Average Total Flowtime: 32.4  
+Average Total Tardiness: 7.6  

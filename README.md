@@ -4,7 +4,7 @@
 ## How to run:
 - Make sure Python 3 is installed
 - Make sure Job.py and Machine.py are in the same folder
-- Change directory (cd) to the folder the files are located
+- Change directory (cd) to the folder where the files are located
 - Run the command: python Machine.py
 - Note: No external dependencies required
 

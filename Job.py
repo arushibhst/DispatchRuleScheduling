@@ -18,7 +18,10 @@ class Job:
         elif self.__rule == "SPT":
             return self.__PT < other.getPT()
         # else earliest due date (EDD)
-        return self.__DD < other.getDD()
+        elif self.__rule == "EDD":
+            return self.__DD < other.getDD()
+        # custom rule: Shortest Processing Time and Earliest Due Date combined 
+        return self.__PT < other.getPT() and self.__DD < other.getDD()
     
     def calcFlow(self):
         self.__flowtime = self.__FT - self.__AT
@@ -44,20 +47,14 @@ class Job:
     def getDD(self):
         return self.__DD
     
-    def getRule(self):
-        return self.__rule
-    
     def getFT(self):
         return self.__FT
-    
-    def getFlowtime(self):
-        return self.__flowtime
     
     def isProcessed(self):
         return self.__isProcessed
     
     def process(self):
-        if(self.isProcessed == True):
+        if(self.isProcessed() == True):
             print("already processed")
         self.__isProcessed = True
         return self.__isProcessed

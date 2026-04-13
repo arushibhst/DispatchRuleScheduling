@@ -1,5 +1,5 @@
 # Dispatching Rule Scheduling
-#### This program finds a solution to a static scheduling problem with 5 jobs, using four dispatching rules: First Come First Serve, Shortest Processing Time, Earliest Due Date, and a combination of the Shortest Processing Time and Earliest Due Date rules.
+#### This program finds a solution to a non-flexible static scheduling problem with 5 jobs, using four dispatching rules: First Come First Serve, Shortest Processing Time, Earliest Due Date, and a combination of the Shortest Processing Time and Earliest Due Date rules.
 
 ## How to run:
 - Make sure Python 3 is installed

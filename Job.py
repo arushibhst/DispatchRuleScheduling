@@ -21,7 +21,8 @@ class Job:
         elif self.__rule == "EDD":
             return self.__DD < other.getDD()
         # custom rule: Shortest Processing Time and Earliest Due Date combined 
-        return self.__PT < other.getPT() and self.__DD < other.getDD()
+        # this compares the sum of the two parameters
+        return (self.__PT + self.__DD) < (other.getPT() + other.getDD())
     
     def calcFlow(self):
         self.__flowtime = self.__FT - self.__AT
